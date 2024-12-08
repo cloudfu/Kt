@@ -163,11 +163,13 @@ object CoroutineSample {
         }
     }
 
-    private fun printWithThreadInfo(){
+    private suspend fun printWithThreadInfo(){
+        delay(1000)
         Log.i(TAG, "currentThread: ${Thread.currentThread().name}")
     }
 
-    private fun printWithThreadInfo(msg: String){
+    private suspend fun printWithThreadInfo(msg: String){
+        delay(1000)
         Log.i(TAG, "${msg}, currentThread: ${Thread.currentThread().name}")
     }
 
